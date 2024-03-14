@@ -35,8 +35,9 @@ public class CurrencyInfoGatherer {
         this.restTemplate = restTemplateBuilder.build();
     }
 
-    //@Scheduled(cron = "0 0 6 * * *")
-    //@Scheduled(cron = "1 * * * * *")
+    // Annotations should be commented out when running the application only for testing purposes.
+    //@Scheduled(cron = "${cron.expression.daily}")
+    //@Scheduled(cron = "${cron.expression.twiceaminute}")
     public void gatherCurrencyInfo() {
         ResponseEntity<String> response = restTemplate.getForEntity(getUrl(), String.class);
         if (HttpStatus.OK.equals(response.getStatusCode())) {

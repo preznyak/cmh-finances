@@ -17,6 +17,7 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+        // Should be commented out when running the application and calling real API
         loadCurrencyInfo();
     }
 
