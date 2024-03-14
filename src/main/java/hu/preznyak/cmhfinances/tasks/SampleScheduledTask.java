@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Component
 public class SampleScheduledTask {
 
-    @Scheduled(cron = "* * * * * *")
+    @Scheduled(cron = "0 * * * * *")
     public void sampleTask() {
         System.out.println("Task run at: " + LocalDateTime.now());
     }
